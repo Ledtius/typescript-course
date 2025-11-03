@@ -58,7 +58,7 @@ enum UserRole {
   EDITOR = "editor",
   VIEWER = "viewer",
 }
-
+/* 12 */
 function checkPermission(role: UserRole) {
   switch (role) {
     case "admin":
