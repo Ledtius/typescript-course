@@ -65,3 +65,81 @@ const greetUser = (user: User): void => {
 };
 
 greetUser({ name: "Calet", email: "calebtius@gmail.com", isAdmin: true });
+
+type Product = {
+  readonly id: string | number;
+  name: string;
+  price: number;
+};
+
+const product1: Product = {
+  id: "222",
+  name: "Carrot",
+  price: 1.2,
+};
+
+// product1.id = 2343;
+product1.name = "Pear";
+
+console.log(product1);
+
+let input: unknown = "TypeScript";
+
+const length = (input as string).length;
+
+console.log(length);
+
+let nickname: string | null;
+
+nickname = "null";
+
+const displayName = nickname ?? "Anonymous";
+
+console.log(displayName);
+
+const wrapValue = <T>(value: T): T => {
+  return value;
+};
+
+console.log(wrapValue(2));
+console.log(wrapValue("JS"));
+
+type UserType = {
+  name: string;
+  age: number;
+  skill: string[];
+};
+
+interface UserInterface {
+  name: string;
+  age: number;
+  skill: string[];
+}
+
+type UserId = {
+  id?: string;
+};
+
+type UserFull = UserId & UserType;
+
+interface ExtendUser extends UserInterface {
+  id?: string;
+}
+
+const createUser = (user: UserFull): UserType => {
+  user.id = crypto.randomUUID();
+  return user;
+};
+
+const createUser2 = (user: ExtendUser): ExtendUser => {
+  user.id = crypto.randomUUID();
+  return user;
+};
+
+console.log(
+  createUser({ age: 24, name: "Carlos", skill: ["Frontend", "Etc"] })
+);
+
+console.log(
+  createUser2({ age: 31, name: "Osiris", skill: ["Backend", "Etc"] })
+);

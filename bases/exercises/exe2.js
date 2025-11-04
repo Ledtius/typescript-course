@@ -38,3 +38,33 @@ var greetUser = function (user) {
     console.log(user.isAdmin ? "Welcome admin ".concat(user.name, "!") : "Welcome ".concat(user.name, "!"));
 };
 greetUser({ name: "Calet", email: "calebtius@gmail.com", isAdmin: true });
+var product1 = {
+    id: "222",
+    name: "Carrot",
+    price: 1.2,
+};
+// product1.id = 2343;
+product1.name = "Pear";
+console.log(product1);
+var input = "TypeScript";
+var length = input.length;
+console.log(length);
+var nickname;
+nickname = "null";
+var displayName = nickname !== null && nickname !== void 0 ? nickname : "Anonymous";
+console.log(displayName);
+var wrapValue = function (value) {
+    return value;
+};
+console.log(wrapValue(2));
+console.log(wrapValue("JS"));
+var createUser = function (user) {
+    user.id = crypto.randomUUID();
+    return user;
+};
+var createUser2 = function (user) {
+    user.id = crypto.randomUUID();
+    return user;
+};
+console.log(createUser({ age: 24, name: "Carlos", skill: ["Frontend", "Etc"] }));
+console.log(createUser2({ age: 31, name: "Osiris", skill: ["Backend", "Etc"] }));
