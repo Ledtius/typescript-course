@@ -43,7 +43,7 @@ var product1 = {
     name: "Carrot",
     price: 1.2,
 };
-// product1.id = 2343;
+product1.id = 2343;
 product1.name = "Pear";
 console.log(product1);
 var input = "TypeScript";
@@ -68,3 +68,34 @@ var createUser2 = function (user) {
 };
 console.log(createUser({ age: 24, name: "Carlos", skill: ["Frontend", "Etc"] }));
 console.log(createUser2({ age: 31, name: "Osiris", skill: ["Backend", "Etc"] }));
+/* Extra - Course */
+// Funciones Básicas
+function sumar(a, b) {
+    return a + b;
+}
+var contar = function (heroes) {
+    return heroes.length;
+};
+var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+contar(superHeroes);
+//Parametros por defecto
+var llamarBatman = function (llamar) {
+    if (llamar === void 0) { llamar = true; }
+    if (llamar) {
+        console.log("Batiseñal activada");
+    }
+};
+llamarBatman(false);
+// Rest?
+var unirheroes = function () {
+    var personas = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        personas[_i] = arguments[_i];
+    }
+    return personas.join(", ");
+};
+// Tipo funcion
+var noHaceNada = function (numero, texto, booleano, arreglo) { };
+// Crear el tipo de funcion que acepte la funcion "noHaceNada"
+var noHaceNadaTampoco;
+noHaceNadaTampoco = noHaceNada;
