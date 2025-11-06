@@ -20,3 +20,20 @@ var table = {
     first: "Moloc",
     second: false,
 };
+/* Wrap in array
+Crea una función wrapInArray que reciba un valor de tipo genérico y devuelva ese valor dentro de un array. */
+var wrapInArray = function (value) {
+    return [value];
+};
+console.log(wrapInArray("Hallow"));
+console.log(wrapInArray(1));
+// console.log([2]);
+var flash = {
+    name: "Barry",
+    age: 24,
+    powers: ["Run", "Travel in the time"],
+    getName: function () {
+        return this.name;
+    },
+};
+console.log(flash.getName());
