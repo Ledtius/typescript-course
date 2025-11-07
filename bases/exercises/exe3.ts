@@ -17,6 +17,7 @@ Si el array está vacío, debe devolver undefined. */
 
 const getFirstElement = <T>(arr: T[]): T | undefined => {
   return arr[0];
+  // return arr;
 };
 
 console.log(getFirstElement([1, 2, 3, 4, 4]));
@@ -98,7 +99,7 @@ const bumblebee: Vehiculos = {
 
 type Villano = {
   nombre: string;
-  edad: number;
+  edad: number | undefined;
   mutante: boolean;
 };
 
@@ -145,6 +146,6 @@ const apocalipsis: Apocalipsis = {
 
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique: Charles | Apocalipsis;
-
 mystique = charles;
 mystique = apocalipsis;
+

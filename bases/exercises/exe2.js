@@ -1,68 +1,67 @@
-var framework = "React";
-var version = 18;
-var isFrontend = true;
+let framework = "React";
+const version = 18;
+const isFrontend = true;
 framework = "Angular";
 console.log(framework);
 function sum(num1, num2) {
     return num1 + num2;
 }
 console.log(sum(1, 2));
-var introduce = function (name, age) {
-    return "Hi, I'm ".concat(name, " ").concat(age ? ",I'm ".concat(age) : "");
+const introduce = (name, age) => {
+    return `Hi, I'm ${name} ${age ? `,I'm ${age}` : ""}`;
 };
 console.log(introduce("Calet", 24));
-var book = {
+const book = {
     title: "El viejo y el mar",
     author: "None",
     published: 1234,
     available: true,
 };
-var printSkills = function (arr) {
+const printSkills = (arr) => {
     //   arr.forEach((name) => {});
-    for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
-        var name_1 = arr_1[_i];
-        console.log(name_1);
+    for (const name of arr) {
+        console.log(name);
     }
 };
 printSkills(["Sam", "Niel", "Ahitofel", "Zelofeat"]);
-var formatId = function (id) {
+const formatId = (id) => {
     return id;
 };
 console.log(formatId(132));
 console.log(formatId("132"));
-var logMessage = function (message) {
+const logMessage = (message) => {
     console.log(message);
 };
 logMessage("lorem");
-var greetUser = function (user) {
-    console.log(user.isAdmin ? "Welcome admin ".concat(user.name, "!") : "Welcome ".concat(user.name, "!"));
+const greetUser = (user) => {
+    console.log(user.isAdmin ? `Welcome admin ${user.name}!` : `Welcome ${user.name}!`);
 };
 greetUser({ name: "Calet", email: "calebtius@gmail.com", isAdmin: true });
-var product1 = {
+const product1 = {
     id: "222",
     name: "Carrot",
     price: 1.2,
 };
-product1.id = 2343;
+// product1.id = 2343;
 product1.name = "Pear";
 console.log(product1);
-var input = "TypeScript";
-var length = input.length;
+let input = "TypeScript";
+const length = input.length;
 console.log(length);
-var nickname;
+let nickname;
 nickname = "null";
-var displayName = nickname !== null && nickname !== void 0 ? nickname : "Anonymous";
+const displayName = nickname ?? "Anonymous";
 console.log(displayName);
-var wrapValue = function (value) {
+const wrapValue = (value) => {
     return value;
 };
 console.log(wrapValue(2));
 console.log(wrapValue("JS"));
-var createUser = function (user) {
+const createUser = (user) => {
     user.id = crypto.randomUUID();
     return user;
 };
-var createUser2 = function (user) {
+const createUser2 = (user) => {
     user.id = crypto.randomUUID();
     return user;
 };
@@ -73,29 +72,26 @@ console.log(createUser2({ age: 31, name: "Osiris", skill: ["Backend", "Etc"] }))
 function sumar(a, b) {
     return a + b;
 }
-var contar = function (heroes) {
+const contar = (heroes) => {
     return heroes.length;
 };
-var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
+const superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
 contar(superHeroes);
 //Parametros por defecto
-var llamarBatman = function (llamar) {
-    if (llamar === void 0) { llamar = true; }
+const llamarBatman = (llamar = true) => {
     if (llamar) {
         console.log("Batiseñal activada");
     }
 };
 llamarBatman(false);
 // Rest?
-var unirheroes = function () {
-    var personas = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        personas[_i] = arguments[_i];
-    }
+const unirheroes = (...personas) => {
     return personas.join(", ");
 };
 // Tipo funcion
-var noHaceNada = function (numero, texto, booleano, arreglo) { };
+const noHaceNada = (numero, texto, booleano, arreglo) => { };
 // Crear el tipo de funcion que acepte la funcion "noHaceNada"
-var noHaceNadaTampoco;
+let noHaceNadaTampoco;
 noHaceNadaTampoco = noHaceNada;
+export {};
+//# sourceMappingURL=exe2.js.map

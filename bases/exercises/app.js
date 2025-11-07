@@ -1,25 +1,25 @@
-(function () {
+(() => {
     // Tipos
-    var batman = "Bruce";
-    var superman = "Clark";
-    var existe = false;
+    const batman = "Bruce";
+    const superman = "Clark";
+    const existe = false;
     // Tuplas
-    var parejaHeroes = [batman, superman];
-    var villano = ["Lex Lutor", 5, true];
+    const parejaHeroes = [batman, superman];
+    const villano = ["Lex Lutor", 5, true];
     // Arreglos
-    var aliados = ["Mujer Maravilla", "Acuaman", "San", "Flash"];
+    const aliados = ["Mujer Maravilla", "Acuaman", "San", "Flash"];
     //Enumeraciones
-    var Fuerza;
+    let Fuerza;
     (function (Fuerza) {
         Fuerza[Fuerza["acuaman"] = 0] = "acuaman";
         Fuerza[Fuerza["batman"] = 1] = "batman";
         Fuerza[Fuerza["flash"] = 5] = "flash";
         Fuerza[Fuerza["superman"] = 100] = "superman";
     })(Fuerza || (Fuerza = {}));
-    var fuerzaFlash = 5;
-    var fuerzaSuperman = 100;
-    var fuerzaBatman = 1;
-    var fuerzaAcuaman = 0;
+    const fuerzaFlash = 5;
+    const fuerzaSuperman = 100;
+    const fuerzaBatman = 1;
+    const fuerzaAcuaman = 0;
     // Retorno de funciones
     function activar_batiseñal() {
         return "activada";
@@ -28,7 +28,9 @@
         console.log("Auxilio!!!");
     }
     // Aserciones de Tipo
-    var poder = "100";
-    var largoDelPoder = poder.length;
+    const poder = "100";
+    const largoDelPoder = poder.length;
     console.log(largoDelPoder);
 })();
+export {};
+//# sourceMappingURL=app.js.map

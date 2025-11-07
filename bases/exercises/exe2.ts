@@ -78,7 +78,7 @@ const product1: Product = {
   price: 1.2,
 };
 
-product1.id = 2343;
+// product1.id = 2343;
 product1.name = "Pear";
 
 console.log(product1);

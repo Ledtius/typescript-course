@@ -14,6 +14,7 @@ Crea una función genérica getFirstElement que reciba un array de tipo genéric
 Si el array está vacío, debe devolver undefined. */
 var getFirstElement = function (arr) {
     return arr[0];
+    // return arr;
 };
 console.log(getFirstElement([1, 2, 3, 4, 4]));
 console.log(getFirstElement(["a", "b"]));

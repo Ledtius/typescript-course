@@ -1,18 +1,18 @@
-var username;
-var age;
-var isDev;
-var skills;
+let username;
+let age;
+let isDev;
+let skills;
 function greet(name) {
-    return "Hello ".concat(name.toUpperCase);
+    return `Hello ${name.toUpperCase}`;
 }
-var name = greet("Calet");
+const name = greet("Calet");
 console.log(name);
 function printId(id) {
-    console.log("Your ID is : ".concat(id));
+    console.log(`Your ID is : ${id}`);
 }
 printId(101);
 printId("abc");
-var user = {
+const user = {
     name: "Calet",
     age: 23,
     isOnline: true,
@@ -20,15 +20,14 @@ var user = {
 // user.name = "3ss♦";
 console.log(user.name);
 function getTotal(numbers) {
-    return numbers.reduce(function (acc, n) { return acc + n; }, 0);
+    return numbers.reduce((acc, n) => acc + n, 0);
 }
 console.log(getTotal([1, 23, 4, 50]));
-function welcome(name, age) {
-    if (name === void 0) { name = "Guest"; }
+function welcome(name = "Guest", age) {
     if (age) {
-        return "Welcome ".concat(name, ", age ").concat(age);
+        return `Welcome ${name}, age ${age}`;
     }
-    return "Welcome ".concat(name);
+    return `Welcome ${name}`;
 }
 console.log(welcome("Goku", 18));
 var UserRole;
@@ -37,16 +36,17 @@ var UserRole;
     UserRole["EDITOR"] = "editor";
     UserRole["VIEWER"] = "viewer";
 })(UserRole || (UserRole = {}));
+/* 12 */
 function checkPermission(role) {
     switch (role) {
         case "admin":
-            console.log("Welcome ".concat(role, " - Max level"));
+            console.log(`Welcome ${role} - Max level`);
             break;
         case "editor":
-            console.log("Welcome ".concat(role, " - Medium level"));
+            console.log(`Welcome ${role} - Medium level`);
             break;
         case "viewer":
-            console.log("Welcome ".concat(role, " - Min level"));
+            console.log(`Welcome ${role} - Min level`);
             break;
         default:
             console.log("User no valid");
@@ -54,3 +54,5 @@ function checkPermission(role) {
     }
 }
 checkPermission(UserRole.VIEWER);
+export {};
+//# sourceMappingURL=app.js.map
