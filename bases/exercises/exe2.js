@@ -18,7 +18,6 @@ const book = {
     available: true,
 };
 const printSkills = (arr) => {
-    //   arr.forEach((name) => {});
     for (const name of arr) {
         console.log(name);
     }
@@ -42,7 +41,6 @@ const product1 = {
     name: "Carrot",
     price: 1.2,
 };
-// product1.id = 2343;
 product1.name = "Pear";
 console.log(product1);
 let input = "TypeScript";
@@ -67,8 +65,6 @@ const createUser2 = (user) => {
 };
 console.log(createUser({ age: 24, name: "Carlos", skill: ["Frontend", "Etc"] }));
 console.log(createUser2({ age: 31, name: "Osiris", skill: ["Backend", "Etc"] }));
-/* Extra - Course */
-// Funciones Básicas
 function sumar(a, b) {
     return a + b;
 }
@@ -77,20 +73,16 @@ const contar = (heroes) => {
 };
 const superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
 contar(superHeroes);
-//Parametros por defecto
 const llamarBatman = (llamar = true) => {
     if (llamar) {
         console.log("Batiseñal activada");
     }
 };
 llamarBatman(false);
-// Rest?
 const unirheroes = (...personas) => {
     return personas.join(", ");
 };
-// Tipo funcion
 const noHaceNada = (numero, texto, booleano, arreglo) => { };
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
 let noHaceNadaTampoco;
 noHaceNadaTampoco = noHaceNada;
 export {};
